@@ -1,14 +1,14 @@
 # Java Programs
 
-#### Write a program to reveser the Given String
-``package org.example;
+#### Write a program to reverse the Given String
+`package org.example;
 
 public class ReverseString {
 public static void main(String args[]){
 String str = "hello";
 String rev = "";
 for (int i=0; i<str.length(); i++){
-// this approch creates new string object and its inefficient
+//This approach creates a new string object and it is inefficient
 rev = str.charAt(i) + rev;
 }
 System.out.println(rev);
@@ -20,4 +20,4 @@ System.out.println(rev);
         }
         System.out.println(rev.toString());
     }
-}``
+}`
