@@ -1,7 +1,8 @@
 # Java Programs
 
 #### Write a program to reverse the Given String
-`package org.example;
+``` Java
+package org.example;
 
 public class ReverseString {
 public static void main(String args[]){
@@ -20,4 +21,5 @@ System.out.println(rev);
         }
         System.out.println(rev.toString());
     }
-}`
+}
+```
