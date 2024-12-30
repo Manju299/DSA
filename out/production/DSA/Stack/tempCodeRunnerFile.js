@@ -1,0 +1,2 @@
+
+myStack.push(2);
