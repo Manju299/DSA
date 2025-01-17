@@ -28,6 +28,7 @@ public class JavaArrayList {
         // iteration throung the array list
         //Ussing for loop
 
+        System.out.println(list.size());
         for (int i=0; i<list.size(); i++){
             System.out.println(list.get(i));
         }

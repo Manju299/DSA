@@ -9,20 +9,16 @@ public class PrimeNumber {
             if (n % i == 0) {
                 return false;
             }
-
         }
         return  true;
     }
         public static void main (String[] args){
             int n = 4;
-            ;
             if (prime_number(n)){
                 System.out.println("Prime number");
             }
             else {
                 System.out.println(("Not prime number"));
             }
-
-
         }
     }

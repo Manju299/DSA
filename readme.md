@@ -173,3 +173,171 @@ public class JavaLinkedList {
 }
 
 ```
+### Priority Queue
+```java
+package com.collections;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class JavaPQ {
+        public static void main(String[] args){
+            Queue<Integer> pq = new PriorityQueue<>();
+            pq.offer(40);
+            pq.offer(34);
+            pq.offer(12);
+            pq.offer(98);
+
+            System.out.println(pq);
+            System.out.println(pq.poll());
+            System.out.println(pq.peek());
+            System.out.println();
+            pq.add(11);
+            pq.offer(12);
+            System.out.println(pq);
+        }
+}
+
+```
+
+### Array Deque
+```package com.collections;
+
+import java.util.ArrayDeque;
+
+public class JavaArrDeQ {
+public static  void main(String[] args){
+    ArrayDeque<Integer> adq = new ArrayDeque<>();
+    adq.offer(1);
+    adq.offer(2);
+    adq.offer(3);
+
+    adq.offerFirst(4);
+    adq.offerLast(5);
+    System.out.println(adq);
+//    System.out.println(adq.poll());
+
+    System.out.println(adq.peek());
+    System.out.println(adq.peekFirst());
+    System.out.println(adq.peekLast());
+
+    System.out.println(adq.pollFirst());
+    System.out.println(adq.poll());
+    System.out.println(adq.pollLast());
+    System.out.println(adq);
+}
+}
+```
+
+## Set
+### HashSet: Random Order
+```java
+package com.collections;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class JavaHashSet {
+    public static void main(String[] args){
+        Set<Integer> set = new HashSet<>();
+        set.add(6);
+        set.add(7);
+        set.add(8);
+        set.add(9);
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.add(5);
+
+        System.out.println(set);
+        System.out.println(set.remove(4));
+        System.out.println(set.contains(2));
+        System.out.println(set.isEmpty());
+        System.out.println(set.size());
+    }
+}
+
+```
+
+### LinkedHashSet: Ascending order
+```java
+package com.collections;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class JavaLinkedHashSet {
+    public static void main(String[] args) {
+        Set<Integer> set = new LinkedHashSet<>();  // LinkedHashSet maintains the insertion order and return it
+        set.add(6);
+        set.add(7);
+        set.add(8);
+        set.add(9);
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.add(5);
+
+        System.out.println(set);
+        System.out.println(set.remove(4));
+        System.out.println(set.contains(2));
+        System.out.println(set.isEmpty());
+        System.out.println(set.size());
+    }
+}
+```
+### Tree Set : In Sorted Order
+
+```java
+package com.collections;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class JavaTreeSet {
+    public static void main(String[] args) {
+        Set<Integer> set = new TreeSet<>(); // Tree return the elements in sorted order
+        set.add(6);
+        set.add(7);
+        set.add(8);
+        set.add(9);
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.add(5);
+
+        System.out.println(set);
+        System.out.println(set.remove(4));
+        System.out.println(set.contains(2));
+        System.out.println(set.isEmpty());
+        System.out.println(set.size());
+    }
+}
+
+
+```
+
+
+
+
+##  Exception 
+Def: Exception is an abnormal event which occurs at  run which will distturb the normal flow 
+of program execution and terminates your program abruptly.
+
+#### How to handle exceptions
+By using try - catch block
+By using throws" clause.
+
+1. Checked Exception
+2. Unchecked Exception
+
+
+
+
