@@ -12,6 +12,6 @@ public class SumOfGivenInterger {
     }
 
     public static void main(String[] args) {
-        System.out.println(sumOfInt(123435678));
+        System.out.println(sumOfInt(1234));
     }
 }

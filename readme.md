@@ -55,6 +55,152 @@ public class ExceptionHandling {
 ##### Display double words in given String
 ##### Print Second largest
 
+###### 1. Prime Number
+```java
+package org.example;
+
+public class PrimeNumber {
+    public static boolean prime_number(int n) {
+        if (n < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return  true;
+    }
+        public static void main (String[] args){
+            int n = 4;
+            if (prime_number(n)){
+                System.out.println("Prime number");
+            }
+            else {
+                System.out.println(("Not prime number"));
+            }
+        }
+    }
+
+```
+###### 2. Factorial
+```java
+package org.example;
+
+public class Factorial {
+    public static long factorial(Long n){
+        if(n==1){
+            return n;
+        }
+        return (n * factorial(n-1));
+    }
+    public static void main(String[] args){
+
+        System.out.println(factorial(30L));
+    }
+}
+
+```
+###### 3. Frequency of the String
+```java
+package org.example;
+import java.util.HashMap;
+public class FrequencyOfStringChar {
+   // Write a Java Program to find the duplicates of a given String.
+   // Write a Java Program to count the number of characters in a given String.
+    public static void getFrequency(String str){
+        HashMap<Character, Integer> map = new HashMap<>();
+        HashMap<Character, Integer> map1 = new HashMap<>();
+        char[] arr = str.toCharArray();
+
+        for (char c: arr){
+            if (map.containsKey(c)){
+                map.put(c, map.get(c) + 1);
+            }else{
+                map.put(c, 1);
+            }
+        }
+//      get only repeated char
+        for(char c:arr){
+            if (map.get(c)>1){
+                map1.put(c, map.get(c));
+            }
+        }
+
+//        // to remove the duplicates from the map
+//        for(char c:arr){
+////            if (map.get(c)>1){
+////                map.remove(c);
+////            }
+//            System.out.println(map.get(c));
+//        }
+
+        System.out.println(map);
+    }
+    public static void main(String[] args) {
+        getFrequency("RandomStringForDuplicateCharCheck");
+        getFrequency("The lazy fox jump over the quick brown dog ");
+    }
+}
+
+```
+
+###### 4. Armstrong Number
+```java
+package org.example;
+
+import java.util.Scanner;
+
+//Write a Java Program to check if a number is Armstrong number or not.
+public class ArmstrongNumber {
+    public static void main(String[] args){
+        int num = 9;
+        int actualno = num;
+        double result = 0;
+
+        if (num < 10){
+            result = -1;
+        }else {
+        while (actualno!=0){
+            int n = actualno%10;
+            result = result + Math.pow(n,3);
+            actualno = actualno/10;
+        }}
+
+        if (result==num){
+            System.out.println("Given number is armstrong");
+        }else {
+            System.out.println("Not an Armstrong number");
+        }
+        System.out.println(result);
+
+    }
+}
+
+```
+
+##### Write a Java Program to generate Output "aabbbcccc" with the input "a2b3c4"
+```java
+package org.example;
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        String str = "a2b3c4";
+        for (int i=0;i<str.length();i++){
+            if (Character.isAlphabetic(str.charAt(i))){
+                System.out.print(str.charAt(i));
+            }else{
+                int num = Character.getNumericValue(str.charAt(i));
+                for (int j=1;j<num;j++){
+                    System.out.print(str.charAt(i-1));
+                }
+            }
+        }
+    }
+}
+
+```
+
 
 
 # JAVA COLLECTION FRAMEWORK
@@ -201,7 +347,8 @@ public class JavaPQ {
 ```
 
 ### Array Deque
-```package com.collections;
+``` java
+package com.collections;
 
 import java.util.ArrayDeque;
 
