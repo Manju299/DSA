@@ -486,5 +486,74 @@ By using throws" clause.
 2. Unchecked Exception
 
 
+###Linked List
+1. Count Lenght of the Linked list
+
+```java
+public class CountLenghtOfLinkedList {
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(20);
+        head.next.next.next = new Node(20);
+        head.next.next.next.next = new Node(20);
+        lenghtOfList(head);
+    }
+
+    public static void lenghtOfList(Node head){
+        int count = 0;
+        while (head != null){
+            head = head.next;
+            count++;
+        }
+
+        System.out.println(count);
+    }
+}
+```
+
+2. Search Element in Linked List
+
+```java
+public class LinkedListSerarchElement {
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+       boolean result = searchForElementInList(head, 50);
+       if (result){
+           System.out.println("KeyFound");
+       }
+       else {
+           System.out.println("Key Not Found");
+       }
+    }
+    public static boolean searchForElementInList(Node head, int key){
+        Node cur = head;
+        while(cur != null){
+            if (cur.data == key){
+                return true;
+            }
+            cur = cur.next;
+        }
+        return false;
+    }
+
+}
+
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+```
+
+
+
+
 
 
